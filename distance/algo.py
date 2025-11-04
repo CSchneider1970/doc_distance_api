@@ -37,7 +37,10 @@ def get_frequencies(input_iterable):
     Note:
         You can assume that the only kinds of white space in the text documents we provide will be new lines or space(s) between words (i.e. there are no tabs)
     """
-    pass
+    result = {}
+    for item in input_iterable:
+        result[item] = result.get(item, 0) + 1  # <-- get with default value 
+    return result
 
 
 def calculate_similarity_score(freq_dict1, freq_dict2):
